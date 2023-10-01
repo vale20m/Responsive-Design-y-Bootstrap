@@ -56,7 +56,7 @@ function spacesNumber (array){
 
 function randomWordsNumber (spaces){
     const x = Math.floor (Math.random()*spaces);
-    while (x < 3 && x > 12){
+    while (x < 3){
         x = Math.floor (Math.random()*spaces);
     }
     return x;
@@ -95,7 +95,7 @@ function getPhrase (array){
         }
         i++;
     }
-    if (textArray[i] == ','){
+    if (textArray[i-1] == ','){
         phrase = phrase.slice(0, -1);
     }
     return phrase;

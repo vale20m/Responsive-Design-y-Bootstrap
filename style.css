@@ -1,5 +1,5 @@
 @media (max-width: 991px) {
-    #menu, h2, .carousel{
+    #menu, h3, .carousel{
         display: none;
     }
 }
