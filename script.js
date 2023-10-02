@@ -55,8 +55,8 @@ function spacesNumber (array){
 }
 
 function randomWordsNumber (spaces){
-    const x = Math.floor (Math.random()*spaces);
-    while (x < 3){
+    let x = Math.floor (Math.random()*spaces);
+    while (x < 3 || x > 12){
         x = Math.floor (Math.random()*spaces);
     }
     return x;
@@ -72,12 +72,11 @@ function randomStart (words, spaces){
 
 function getPhrase (array){
     const textArray = array[randomArrayNumber(array)].innerHTML;
-    let spaces = spacesNumber(textArray);
+    console.log(array.length);
+    console.log(randomArrayNumber(array));
+    const spaces = spacesNumber(textArray);
     let words = randomWordsNumber(spaces);
     let start = randomStart(words, spaces);
-    console.log("Spaces: " + spaces);
-    console.log("Words: " + words);
-    console.log("Start: " + start);
     let i = 0;
     while (start > 0){
         if (textArray[i] == ' '){
@@ -90,12 +89,12 @@ function getPhrase (array){
         if (textArray[i] == ' '){
             words--;
         }
-        if (words != 0){
-            phrase += textArray[i];
-        }
+        phrase += textArray[i];
         i++;
     }
-    if (textArray[i-1] == ','){
+    if (textArray[i-2] == ','){
+        phrase = phrase.slice(0, -2);
+    } else {
         phrase = phrase.slice(0, -1);
     }
     return phrase;
