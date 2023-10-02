@@ -2,11 +2,22 @@
     #menu, h3, .carousel{
         display: none;
     }
+
+    #search{
+        width: 100%;
+    }
 }
 
 @media (min-width: 992px) {
     #options{
         display: none;
+    }
+
+    #search{
+        position: absolute;
+        right: 0;
+        top: 2;
+        width: 25%;
     }
 }
 
