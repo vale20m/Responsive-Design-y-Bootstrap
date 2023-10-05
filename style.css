@@ -1,9 +1,13 @@
+/* ESTILOS QUE SE APLICAN CUANDO EL ANCHO DE LA PAGINA ES MENOR O IGUAL A 991px*/
+
 @media (max-width: 991px) {
     #search{
         width: 100%;
         margin-top: 0.25rem;
     }
 }
+
+/* ESTILOS QUE SE APLICAN CUANDO EL ANCHO DE LA PAGINA SUPERA O ES IGUAL A 992px*/
 
 @media (min-width: 992px) {
     #search{

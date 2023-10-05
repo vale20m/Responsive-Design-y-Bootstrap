@@ -2,47 +2,14 @@ const text = document.querySelectorAll(".texto");
 
 const carouselItems = document.querySelectorAll(".carousel-item");
 
-// let phrasesArray = [];
-
-// function getPhrases(array){
-//     let phrase = "";
-//     for (const text of array) {
-//         phrase = "";
-//         for (i = 0; i < text.innerHTML.length; i++){
-//             if (text.innerHTML[i] != '.' && text.innerHTML[i] != ','){
-//                 phrase += text.innerHTML[i];
-//             } else {
-//                 if (phrase[0] == ' '){
-//                     phrase = phrase.slice(1);
-//                 }
-//                 phrasesArray.push(phrase);
-//                 phrase = "";
-//             }
-//         }
-//     }
-// }
-
-// function randomNumber (array){
-//     const x = Math.floor (Math.random()*array.length);
-//     return x;
-// }
-
-// function addPhrases (array){
-//     for (const item of array) {
-//         item.innerHTML = "...";
-//         item.innerHTML += phrasesArray[randomNumber(phrasesArray)].toLowerCase();
-//         item.innerHTML;
-//     }
-// }
-
-// getPhrases(text);
-
-// addPhrases(carouselItems);
+// FUNCION QUE ELIGE DE MANERA ALEATORIA UN PARRAFO
 
 function randomArrayNumber (array){
     const x = Math.floor(Math.random()*array.length);
     return x;
 }
+
+// FUNCION QUE CUENTA LA CANTIDAD DE ESPACIOS QUE SE ENCUENTRAN EN ESE PARRAFO
 
 function spacesNumber (array){
     let cont = 0;
@@ -54,6 +21,8 @@ function spacesNumber (array){
     return cont;
 }
 
+// FUNCION QUE GENERA UN LARGO ALEATORIO (ENTRE 3 Y 12) PARA LA FRASE QUE SE VA A AGREGAR AL CARRUSEL
+
 function randomWordsNumber (spaces){
     let x = Math.floor (Math.random()*spaces);
     while (x < 3 || x > 12){
@@ -61,6 +30,8 @@ function randomWordsNumber (spaces){
     }
     return x;
 }
+
+// FUNCION QUE GENERE UN NUMERO ALEATORIO (DONDE COMENZARA LA FRASE)
 
 function randomStart (words, spaces){
     let x = Math.floor (Math.random()*spaces);
@@ -70,10 +41,10 @@ function randomStart (words, spaces){
     return x;
 }
 
+// FUNCION QUE LLAMA A LAS ANTERIORES PARA TOMAR UNA FRASE ALEATORIA Y PULIRLA
+
 function getPhrase (array){
     const textArray = array[randomArrayNumber(array)].innerHTML;
-    console.log(array.length);
-    console.log(randomArrayNumber(array));
     const spaces = spacesNumber(textArray);
     let words = randomWordsNumber(spaces);
     let start = randomStart(words, spaces);
@@ -100,6 +71,8 @@ function getPhrase (array){
     return phrase;
 }
 
+// FUNCION QUE AGREGA LA FRASE AL CARRUSEL DEL HTML
+
 function setPhrase (array){
     for (const item of array) {
         item.innerHTML = getPhrase(text);
@@ -107,6 +80,8 @@ function setPhrase (array){
 }
 
 setPhrase(carouselItems);
+
+// FUNCION QUE TOMA EL BOTON "OPCIONES" Y CUANDO ESTE ES PRESIONADO, DESPLIEGA EL MENU OCULTO
 
 const optionsMenu = document.querySelector("#options");
 
