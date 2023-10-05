@@ -1,8 +1,4 @@
 @media (max-width: 991px) {
-    #menu, h3, .carousel{
-        display: none;
-    }
-
     #search{
         width: 100%;
         margin-top: 0.25rem;
@@ -10,34 +6,11 @@
 }
 
 @media (min-width: 992px) {
-    #options{
-        display: none;
-    }
-
     #search{
         position: absolute;
         right: 0;
         top: 2;
-        width: 15%;
-    }
-
-    .navText{
-        margin-left: 30%;
-        margin-right: 40%;
-    }
-}
-
-@media (min-width: 576px) {
-    #optionsMenu{
-        width: 75%;
-        margin: auto;
-    }
-}
-
-@media (max-width: 575px) {
-    #optionsMenu{
-        width: 100%;
-        margin: auto;
+        width: 20%;
     }
 }
 

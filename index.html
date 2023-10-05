@@ -14,46 +14,32 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav d-flex flex-nowrap">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav d-flex flex-nowrap row">
                     <form class="d-flex order-lg-4" id="search" role="search">
                         <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
                     </form>
-                    <li class="nav-item order-lg-1 navText">
+                    <li class="nav-item order-lg-1 ms-lg-5 col-8">
                         <button class="nav-link active">Dolor</button>
                     </li>
-                    <li class="nav-item order-lg-2 navText">
+                    <li class="nav-item order-lg-2 col-8">
                         <button class="nav-link">Sit</button>
                     </li>
-                    <li class="nav-item order-lg-3 navText">
+                    <li class="nav-item order-lg-3 col-8">
                         <button class="nav-link">Amet</button>
                     </li>
-                    <li class="nav-item dropdown" id="options">
-                        <button class="nav-link" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item d-lg-none" id="options">
+                        <button class="nav-link">
                             Opciones
                         </button>
-                        <div class="dropdown-menu" id="optionsMenu">
-                            <div class="border rounded">
-                                <button class="dropdown-item py-2">Opción 1</button>
-                            </div>
-                            <div class="border rounded">
-                                <button class="dropdown-item py-2">Opción 2</button>
-                            </div>
-                            <div class="border rounded">
-                                <button class="dropdown-item py-2">Opción 3</button>
-                            </div>
-                            <div class="border rounded">
-                                <button class="dropdown-item py-2">Opción 4</button>
-                            </div>
-                        </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container">
-        <h3 class="text-center mt-5">Lore ipsum...</h3>
-        <div class="carousel slide mb-5 text-center fs-5" data-bs-ride="carousel">
+        <h3 class="text-center mt-5 d-none d-lg-block">Lore ipsum...</h3>
+        <div class="carousel slide mb-5 text-center fs-5 d-none d-lg-block" data-bs-ride="carousel">
             <div class="carousel-inner fs-4">
               <div class="carousel-item active" data-bs-interval="2000"></div>
               <div class="carousel-item" data-bs-interval="2000"></div>
@@ -61,7 +47,7 @@
             </div>
           </div>
         <div class="row">
-            <div class="col-lg-3 my-2" id="menu">
+            <div class="col-lg-3 my-2 d-none d-lg-block mx-auto" id="menu">
                 <div class="border rounded">
                     <button class="dropdown-item p-3"><u>Opción 1</u></button>
                 </div>
@@ -75,7 +61,7 @@
                     <button class="dropdown-item p-3"><u>Opción 4</u></button>
                 </div>
             </div>
-            <div class="row col-lg-9">
+            <div class="row col-lg-9 mx-auto">
                 <div class="texto col-lg-4 col-md-6 bg-light my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin tellus purus, sit amet vestibulum leo imperdiet iaculis. Nunc a tincidunt odio.</div>
                 <div class="texto col-lg-4 col-md-6 bg-light my-2">Donec convallis in nulla consectetur ornare. Vivamus ornare at lorem a semper. Donec a laoreet massa. Sed vel scelerisque risus, eget auctor ante.</div>
                 <div class="texto col-lg-4 col-md-6 bg-light my-2">Nullam congue mi ut felis efficitur lobortis. Aenean pharetra mauris nec ullamcorper sodales. Cras volutpat porta nulla, vitae maximus nunc rhoncus sit amet.</div>

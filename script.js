@@ -107,3 +107,11 @@ function setPhrase (array){
 }
 
 setPhrase(carouselItems);
+
+const optionsMenu = document.querySelector("#options");
+
+const menu = document.querySelector("#menu");
+
+optionsMenu.addEventListener("click", function(){
+    menu.classList.toggle("d-none");
+});
